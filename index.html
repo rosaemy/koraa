@@ -1,0 +1,427 @@
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Agenda Deportiva</title>
+  <meta http-equiv="refresh" content="200"/>
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="expires" content="-1" />
+  <script type="text/javascript" src="https://pelotero.net/smallscripts.js"></script>
+  <link rel="stylesheet" href="https://cssstyles.pages.dev/style1.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>	
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">    
+  <style>
+  body {
+    margin: 0;
+     background: #ececec;
+    font-family: 'arial', sans serif;
+  }
+  .contenedor {
+    width: 65%;
+    height: 95%;
+    margin: 0 auto;
+    padding: 10px 10px;
+    text-align: auto;
+  }
+  
+  .contenedor img {
+    width: 100%;
+  }
+  
+  @media (max-width:600px)  { 
+    .contenedor {
+      width: 90%;
+    }
+  }
+  
+  .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      padding-top: 15px;
+      height: 0;
+       overflow: hidden;
+  }
+  
+  .video-container iframe {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #3069db;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 15px;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #68C420;
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  .alert {
+    padding: 20px;
+    background-color: #E81010;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+  }
+  
+  .alert.success {background-color: #04AA6D;}
+  .alert.info {background-color: #2196F3;}
+  .alert.warning {background-color: #E81010;}
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    color: #bababa;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+  
+  
+  
+  
+  </style>
+  
+  </head>
+  
+  <body link='#547484' onload='guardaHorario();dT();' vlink='#547484'>
+   
+  <div class="contenedor">
+      
+
+      
+      
+      <div class="topnav" id="myTopnav">
+   <a href="javascript:location.reload()" class="active">Refresh</a>
+  <!-- <a href="canales.html"> Deportes </a>
+    <a href="note.html"> Canales </a>-->
+ 
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <br>
+      
+  <div id="wrapper">
+    <ul class="menu">
+ 
+    
+
+
+
+      <center><div class="sombreada_css3"><font size=2 face="Helvetica Neue,Helvetica,Arial,sans-serif" color="#FFFFFF">
+        <b>Agenda deportiva del día Lunes 31 de Octubre 2022</b>
+        </font></div></center>
+
+        <li class="TE"><a href="#">
+          ATP 1000: Paris Masters
+        <span class="t">11:00</span></a>
+        <ul>
+          <li class="subitem1"><a href="Espn3.html" >ESPN 3<span>Calidad 720p</span></a></li> 
+        <li class="subitem1"><a href="sporttv3.html" >Sporttv3<span>Calidad 720p</span></a></li> 
+        </ul>
+        
+       
+        <li class="FUT"><a href="#">
+          Giannina x Asteras
+        <span class="t">17:00</span></a>
+        <ul>
+        <li class="subitem1"><a href="9.html" >TV EN<span>Calidad 720p</span></a></li> 
+        </ul>
+       
+       
+        <li class="FUT"><a href="#">
+          Mioveni x Hermannstadt
+        <span class="t">17:00</span></a>
+        <ul>
+        <li class="subitem1"><a href="8.html" >TV EN<span>Calidad 720p</span></a></li> 
+        </ul>
+
+       
+        <li class="TUR"><a href="#">
+          Başakşehir x Giresunspor
+        <span class="t">18:00</span></a>
+        <ul>
+        <li class="subitem1"><a href="5.html" >TV EN<span>Calidad 720p</span></a></li> 
+        </ul>
+
+       
+        <li class="IT"><a href="#">
+          Verona x Roma
+        <span class="t">18:30</span></a>
+        <ul>
+          <li class="subitem1"><a href="star1.html" >Star+<span>Calidad 720p</span></a></li> 
+          <li class="subitem1"><a href="Espn2.html" >ESPN 2<span>Calidad 720p</span></a></li> 
+        <li class="subitem1"><a href="2.html" >TV EN<span>Calidad 720p</span></a></li> 
+        <li class="subitem1"><a href="7.html" >TV EN<span>Calidad 720p</span></a></li> 
+        <li class="subitem1"><a href="sporttv2.html" >SPORTTV2<span>Calidad 720p</span></a></li> 
+        <li class="subitem1"><a href="premiere4.html" >BRA 4<span>Calidad 720p</span></a></li> 
+        </ul>
+
+        
+        <li class="FUT"><a href="#">
+          Radom x Warta
+        <span class="t">19:00</span></a>
+        <ul>
+        <li class="subitem1"><a href="3.html" >TV EN<span>Calidad 720p</span></a></li> 
+        </ul>
+
+        
+        <li class="POR"><a href="#">
+          Estrela x Vilafranquense
+        <span class="t">19:00</span></a>
+        <ul>
+        <li class="subitem1"><a href="sporttv1.html" >SPORTTV1<span>Calidad 720p</span></a></li> 
+        </ul>
+        <li class="TE"><a href="#">
+          ATP 1000: Paris Masters
+        <span class="t">19:30</span></a>
+        <ul>
+          <li class="subitem1"><a href="Espn3.html" >ESPN 3<span>Calidad 720p</span></a></li> 
+
+        </ul>
+       
+        <li class="FUT"><a href="#">
+          U-Cluj x FCSB
+        <span class="t">20:00</span></a>
+        <ul>
+          <li class="subitem1"><a href="primasports1.html" >PRIMA 1<span>Calidad 720p</span></a></li> 
+        <li class="subitem1"><a href="8.html" >TV EN<span>Calidad 720p</span></a></li> 
+        </ul>
+
+      
+        <li class="IT"><a href="#">
+          Monza x Bologna
+        <span class="t">20:45</span></a>
+        <ul>
+          <li class="subitem1"><a href="2.html" >TV EN<span>Calidad 720p</span></a></li> 
+          <li class="subitem1"><a href="7.html" >TV EN<span>Calidad 720p</span></a></li> 
+          <li class="subitem1"><a href="sporttv2.html" >SPORTTV2<span>Calidad 720p</span></a></li> 
+        </ul>
+
+       
+        <li class="FUT"><a href="#">
+          Argyle x Exeter
+        <span class="t">21:00</span></a>
+        <ul>
+        <li class="subitem1"><a href="1.html" >TV EN<span>Calidad 720p</span></a></li> 
+        </ul>
+
+       
+        <li class="ES"><a href="#">
+          Elche x Getafe
+        <span class="t">21:00</span></a>
+        <ul>
+          <li class="subitem1"><a href="Espn2.html" >ESPN 2<span>Calidad 720p</span></a></li> 
+          <li class="subitem1"><a href="dazenlaliga.html" >dazn la liga<span>Calidad 720p</span></a></li> 
+        <li class="subitem1"><a href="6.html" >TV EN<span>Calidad 720p</span></a></li> 
+        <li class="subitem1"><a href="eleven1por.html" >ELEVEN 1<span>Calidad 720p</span></a></li> 
+        </ul>
+
+        
+        <li class="ES"><a href="#">
+          Levante x Gijón
+        <span class="t">21:00</span></a>
+        <ul>
+        <li class="subitem1"><a href="eleven3por.html" >ELEVEN 3<span>Calidad 720p</span></a></li> 
+        </ul>
+
+       
+        <li class="POR"><a href="#">
+          Vitória x Famalicão
+        <span class="t">21:15</span></a>
+        <ul>
+          <li class="subitem1"><a href="sporttv1.html" >SPORTTV1<span>Calidad 720p</span></a></li> 
+        </ul>
+
+        
+        
+        <li class="CH"><a href="#">
+          Curicó X Ñublense
+        <span class="t">21:30</span></a>
+        <ul>
+          <li class="subitem1"><a href="tntchile.html" >TNT CHILE<span>Calidad 720p</span></a></li> 
+        </ul>
+
+
+<li class="PAR"><a href="#">
+  Tacuary X Nacional
+<span class="t">21:30</span></a>
+<ul>
+  <li class="subitem1"><a href="tigosports.html" >TIGO SPORTS<span>Calidad 720p</span></a></li> 
+</ul>
+
+
+
+        
+        <li class="CH"><a href="#">
+     Católica X Audax
+        <span class="t">00:00</span></a>
+        <ul>
+          <li class="subitem1"><a href="tntchile.html" >TNT CHILE<span>Calidad 720p</span></a></li> 
+        </ul>
+
+        <li class="PAR"><a href="#">
+          Libertad X Cerro Porteño
+        <span class="t">00:00</span></a>
+        <ul>
+          <li class="subitem1"><a href="tigosports.html" >TIGO SPORTS<span>Calidad 720p</span></a></li> 
+        </ul>
+        <li class="BRA"><a href="#">
+          Ceará x Fluminense
+        <span class="t">00:00</span></a>
+        <ul>
+          <li class="subitem1"><a href="Espn4.html" >ESPN 4<span>Calidad 720p</span></a></li> 
+          <li class="subitem1"><a href="premiere1.html" >BRA 1<span>Calidad 720p</span></a></li> 
+        </ul>
+
+       
+        <li class="NBA"><a href="#">
+          Wizards vs. 76ers
+        <span class="t">00:00</span></a>
+        <ul>
+          <li class="subitem1"><a href="8.html" >TV EN<span>Calidad 720p</span></a></li> 
+        </ul>
+
+       
+        <li class="NBA"><a href="#">
+          Nets vs. Pacers
+        <span class="t">00:30</span></a>
+        <ul>
+          <li class="subitem1"><a href="5.html" >TV EN<span>Calidad 720p</span></a></li>
+          <li class="subitem1"><a href="sporttv1.html" >SPORTTV1<span>Calidad 720p</span></a></li>  
+        </ul>
+
+       
+        <li class="NBA"><a href="#">
+          Raptors vs. Hawks
+        <span class="t">00:30</span></a>
+        <ul>
+          <li class="subitem1"><a href="9.html" >TV EN<span>Calidad 720p</span></a></li>
+        </ul>
+
+       
+      
+        <li class="MLB"><a href="#">
+          Phillies vs. Astros
+        <span class="t">01:00</span></a>
+        <ul>
+          <li class="subitem1"><a href="Espn2.html" >ESPN 2<span>Calidad 720p</span></a></li>
+        </ul>
+
+        <li class="WWE"><a href="#">
+          Monday Night Raw
+        <span class="t">01:00</span></a>
+        <ul>
+          <li class="subitem1"><a href="foxsports2.html" >FOX 2 AR<span>Calidad 720p</span></a></li>
+          <li class="subitem1"><a href="fox2mexico.html" >FOX 2 MEX<span>Calidad 720p</span></a></li>
+          <li class="subitem1"><a href="2.html" >TV EN<span>Calidad 720p</span></a></li>
+          <li class="subitem1"><a href="sporttv3.html" >SPORTTV3<span>Calidad 720p</span></a></li>  
+        </ul>
+
+        
+        <li class="NFL"><a href="#">
+          NHL: St Louis x LA Kings
+        <span class="t">01:00</span></a>
+        <ul>
+    
+          <li class="subitem1"><a href="sporttv2.html" >SPORTTV2<span>Calidad 720p</span></a></li>  
+        </ul>
+
+     
+        <li class="NFL"><a href="#">
+          Bengals @ Browns
+        <span class="t">01:15</span></a>
+        <ul>
+          <li class="subitem1"><a href="Espn3.html" >ESPN 3<span>Calidad 720p</span></a></li>
+          <li class="subitem1"><a href="espnextra.html" >ESPN EXTRA<span>Calidad 720p</span></a></li>
+          <li class="subitem1"><a href="1.html" >TV EN<span>Calidad 720p</span></a></li>
+        </ul>
+
+  <center><div class="sombreada_css3"><font size=2 face="Helvetica Neue,Helvetica,Arial,sans-serif" color="#FFFFFF">
+  <b></b>
+  </font></div></center>
+  <center><div class="sombreada_css3"><font size=2 face="Helvetica Neue,Helvetica,Arial,sans-serif" color="#FFFFFF">
+    <b></b>
+    </font></div></center>
+
+  </ul>
+  
+  </li>
+  
+  </ul>
+  </div>
+  
+  
+  
+  <!--initiate accordion-->
+  <script type="text/javascript">
+    $(function() {
+    
+     var menu_ul = $('.menu > li > ul'),
+     menu_a = $('.menu > li > a');
+     
+     menu_ul.hide();
+    
+     menu_a.click(function(e) {
+     e.preventDefault();
+     if(!$(this).hasClass('active')) {
+     menu_a.removeClass('active');
+     menu_ul.filter(':visible').slideUp('fast');
+     $(this).addClass('active').next().stop(true,true).slideDown('fast');
+     } else {
+     $(this).removeClass('active');
+     $(this).next().stop(true,true).slideUp('fast');
+     }
+     });
+    
+    });
+  </script>
+  
+  <br>
+  
+  </div>
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+  </body>
+  </html>
