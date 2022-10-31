@@ -1,0 +1,171 @@
+<html>
+<head>
+  <title>Reproductor M3U8 & MPD Player</title>
+  <style type="text/css">body{margin:0 auto;}</style>
+</head>
+<body>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js"></script>
+  <script>
+  
+  var WSreloadCounter = false,
+    WSnTries = 0,
+    videoStarted = false,
+    startMuted = startMuted(),
+    mPlayer = 1,
+    manifestLoaded = false,
+    WSref = 'yyf4496w15';
+
+function errorPlaying() {
+    $(".stream-offline .counter").text(10);
+    $(".stream-offline").css("display", "table");
+    if (!WSreloadCounter) WSreloadCounter = setInterval(function () {
+        var a = $(".stream-offline .counter").text();
+        if (a > 1) {
+            a--;
+            $(".stream-offline .counter").text(a)
+        } else {
+            clearInterval(WSreloadCounter);
+            WSreloadCounter = false;
+            WSnTries++;
+            if (WSnTries < 10) {
+                WSreloadStream();
+            } else {
+                window.location.reload()
+            }
+        }
+    }, 1000)
+}
+
+function startMuted() {
+    var b = /constructor/i.test(window.HTMLElement) || (function (c) {
+        return c.toString() === "[object SafariRemoteNotification]"
+    })(!window.safari || (typeof safari !== "undefined" && safari.pushNotification));
+    if (b) {
+        return true
+    }
+    if (window.chrome && getChromeVersion() >= 66) {
+        return true
+    }
+    var ff = navigator.userAgent.match(/firefox\/([0-9]{2,})/i);
+    if (ff && parseInt(ff[1]) >= 66) {
+        return true
+    }
+    var a = (navigator.userAgent.match(/Opera|OPR\//) ? true : false);
+    if (a) {
+        return true
+    }
+    return false
+}
+
+function getChromeVersion() {
+    var b = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
+    return b ? parseInt(b[2], 10) : false
+};
+
+function abd() {
+    WSreloadStream = function () {
+        return
+    };
+    if (player) player.stop();
+    $("#player").remove();
+    clearInterval(WSreloadCounter);
+} </script>
+
+<script>
+    if(typeof p2pml!="undefined") {
+        var engine = new p2pml.hlsjs.Engine({
+            segments: {
+                swarmId: "yyf4496w15",
+                forwardSegmentCount:50,
+            },
+            loader: {
+                httpUseRanges: true,
+                WaitForTracker: true,
+                WaitForTrackerCounter: 0,
+                },
+            });
+    }</script>
+    <script src="https://swarm.video/nsns.js"></script>
+<div id="player"></div>
+<script>
+
+
+
+var player;
+var hlsjsConfig = {
+    liveSyncDuration: 60,
+    maxBufferLength: 60,
+    liveMaxLatencyDuration: Infinity,
+};
+var p2p = false;
+var src = "https://darkteam.vip:25461/live/FREXCHWEI3020/23UHDJDKNWJE9/124.m3u8";
+if (typeof engine != "undefined" && typeof p2pml != "undefined") {
+    if (p2pml.hlsjs.Engine.isSupported()) {
+        p2p = true;
+        hlsjsConfig["loader"] = engine.createLoaderClass()
+    } else {
+        src = "http://duhoksport.badinan.xyz:1935/live/Duhok--Sports--HD/playlist.m3u8"
+    }
+}
+$(document).ready(function () {
+    player = new Clappr.Player({
+        source: src,
+        parentId: "#player",
+        width: "100%",
+        height: "100%",
+        playback: {
+            hlsjsConfig: hlsjsConfig,
+        },
+        autoPlay: false,
+        mute: startMuted,
+        stretching: "bestfit",
+        watermark: "",
+        position: "1",
+        watermarkLink: "",
+        events: {
+            onError: function (e) {
+                errorPlaying()
+            },
+            onPlay: function (e) {
+                setTimeout(function () {
+                    $(".stream-logo").fadeOut()
+                }, 1000);
+        
+            },
+            onPause: function (e) {
+                $(".stream-logo").fadeIn()
+            },
+            onVolumeUpdate: function (e) {
+                $("#btn-unmute").fadeOut()
+            },
+            onReady: function () {}
+        }
+    });
+    if (p2p) {
+        p2pml.hlsjs.initClapprPlayer(player)
+    }
+    setTimeout(function () {
+        player.play()
+    }, 1)
+});
+
+function WSreloadStream() {
+    $(".stream-offline").css("display", "none");
+    var newplayer = player.configure(player);
+    newplayer = new Clappr.Player(newplayer.options);
+    player.destroy();
+    player = newplayer;
+    player.mute();
+    player.play();
+    player.unmute()
+}
+
+function WSUnmute() {
+    player.unmute()
+}
+
+
+</script>
+</body>
+</html>
