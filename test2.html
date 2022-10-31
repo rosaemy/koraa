@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+ 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>bien1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+<style>
+
+@media (max-width:600px)  { 
+    .contenedor {
+      width: 90%;
+    }
+  }
+  
+  .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      padding-top: 15px;
+      height: 0;
+       overflow: hidden;
+  }
+  
+  .video-container iframe {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
+
+</style>
+
+    <meta name="robots" content="noindex, nofollow">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        setInterval(function(){
+          console.log('test');
+      
+                  const iframes = document.getElementsByTagName('iframe');
+
+          for (var i = 0; i < iframes.length; i++) {
+               iframes[i].setAttribute('sandbox', 'allow-same-origin');
+               }
+        },3000);
+             
+            </script>
+     
+   
+  </head>
+  <body style="background-color: black;" >
+
+    <div class="video-container">
+<iframe width=auto height=auto  frameborder="0"  allow="autoplay; encrypted-media" allowfullscreen="" src="https://sportz.football/live/br1.php" scrolling="no" title="Reproductor 1" alt="Reproducir" __idm_id__="9846785"></iframe>
+      
+
+        </iframe>
+      </div>
+
+  </body>
+</html>
